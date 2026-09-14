@@ -1,0 +1,217 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-image: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%), url("weather-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px; 
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 16px;
+    margin-bottom: 30px;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    outline: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+}
+
+.search-box input:focus {
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.25);
+}
+
+.search-box button {
+    padding: 15px 28px;
+    border: none;
+    border-radius: 12px;
+    background: #00bcd4; /* Vibrant, modern primary accent color */
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.search-box button:hover {
+    background: #00acc1;
+}
+
+.search-box button:active {
+    transform: scale(0.98);
+}
+
+#message {
+    min-height: 25px;
+    color: #ff8a80; 
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.weather-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px); 
+    border-radius: 24px;
+    padding: 35px 25px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.weather-card h2 {
+    color: #1a2a3a;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.weather-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 35px;
+}
+
+.weather-main img {
+    width: 90px;
+    height: 90px;
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.weather-main h3 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #1a2a3a;
+    line-height: 1;
+}
+
+.weather-main p {
+    color: #627282;
+    font-size: 18px;
+    text-transform: capitalize;
+    margin-top: 6px;
+    font-weight: 500;
+}
+
+.weather-details {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.detail {
+    flex: 1;
+    background: #f4f7f9;
+    padding: 18px 10px;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s ease;
+}
+
+.detail:hover {
+    transform: translateY(-2px);
+}
+
+.detail span {
+    display: block;
+    color: #7f8c8d;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.detail strong {
+    color: #1a2a3a;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* Responsive Overrides */
+@media (max-width: 500px) {
+    body {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .search-box {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .search-box button {
+        width: 100%;
+    }
+
+    .weather-main {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .weather-main h3 {
+        font-size: 40px;
+    }
+
+    .weather-details {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .detail {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+    }
+
+    .detail span {
+        margin-bottom: 0;
+    }
+}

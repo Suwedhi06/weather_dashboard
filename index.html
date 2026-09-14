@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Weather Dashboard</h1>
+        <p class="subtitle">Check the current weather of any city</p>
+
+        <div class="search-box">
+            <input type="text" id="cityInput" placeholder="Enter city name">
+            <button onclick="getWeather()">Search</button>
+        </div>
+
+        <p id="message"></p>
+
+        <div class="weather-card">
+            <h2 id="cityName">--</h2>
+
+            <div class="weather-main">
+                <!-- Added a default hidden class or safe empty alt until source loads -->
+                <img id="weatherIcon" src="data:image/svg+xml;utf8,<svg xmlns='http://w3.org' width='90' height='90' viewBox='0 0 24 24' fill='none' stroke='%23247ba0' stroke-width='2'><circle cx='12' cy='12' r='5'/><path d='M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42'/></svg>" alt="Weather Status">
+                
+                <div>
+                    <h3 id="temperature">--°C</h3>
+                    <p id="description">--</p>
+                </div>
+            </div>
+
+            <div class="weather-details">
+                <div class="detail">
+                    <span>Feels Like</span>
+                    <strong id="feelsLike">--°C</strong>
+                </div>
+
+                <div class="detail">
+                    <span>Humidity</span>
+                    <strong id="humidity">--%</strong>
+                </div>
+
+                <div class="detail">
+                    <span>Wind Speed</span>
+                    <strong id="wind">-- km/h</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
